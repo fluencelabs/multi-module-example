@@ -1,0 +1,20 @@
+[package]
+name = "multi_module_example"
+version = "0.1.0"
+authors = ["Fluence Labs"]
+edition = "2018"
+
+[lib]
+name = "multi_module_example"
+path = "src/lib.rs"
+crate-type = ["cdylib"]
+
+[profile.release]
+debug = false
+lto = true
+opt-level = "z"
+panic = "abort"
+
+[dependencies]
+fluence = {version = "0.1.11", features = ["wasm_logger", "side_module"]}
+log = "0.4"
