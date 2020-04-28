@@ -11,9 +11,11 @@ fn run(arg: String) -> Vec<u8> {
         return "incorrect command".as_bytes().to_vec();
     }
 
+    let arg = cmd[1..].join(" ");
+
     match cmd[0] {
-        "redis" => redis::call(cmd[1].as_bytes()),
-        "sqlite" => sqlite::call(cmd[1].as_bytes()),
+        "redis" => redis::call(arg.as_bytes()),
+        "sqlite" => sqlite::call(arg.as_bytes()),
         _ => "unknown_command".as_bytes().to_vec(),
     }
 }
