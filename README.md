@@ -32,15 +32,15 @@ $> module successfully registered in Frank
 Finally, you could execute requests inside FCE CLI:
 
 ```bush
->> execute redis SET A 1
+$> >> execute redis SET A 1
 result: +OK
->> execute redis GET A
+$> >> execute redis GET A
 result: $1
 1
->> execute sqlite CREATE VIRTUAL TABLE users USING FTS5(body)
+$> >> execute sqlite CREATE VIRTUAL TABLE users USING FTS5(body)
 result: OK
->> execute sqlite INSERT INTO users(body) VALUES('AB'), ('BC'), ('CD'), ('DE')
+$> >> execute sqlite INSERT INTO users(body) VALUES('AB'), ('BC'), ('CD'), ('DE')
 result: OK
->> execute sqlite SELECT * FROM users WHERE users MATCH 'A* OR B*'
+$> >> execute sqlite SELECT * FROM users WHERE users MATCH 'A* OR B*'
 result: AB|BC
 ```

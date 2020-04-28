@@ -5,7 +5,7 @@ authors = ["Fluence Labs"]
 edition = "2018"
 
 [lib]
-name = "multi_module_example"
+name = "mm"
 path = "src/lib.rs"
 crate-type = ["cdylib"]
 
