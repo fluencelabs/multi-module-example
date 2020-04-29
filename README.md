@@ -1,7 +1,7 @@
 # Multi module example
 This is an example of multi modules feature of the Fluence Compute Engine (FCE). It simply passes commands to Redis or SQlite depends on the first parameter:
 ```
-sqlite <sql> => returns result of execution sql request of SQlite
+sqlite <sql> => returns result of execution sql request by SQlite
 redis <cmd>  => the same for Redis 
 ``` 
 
