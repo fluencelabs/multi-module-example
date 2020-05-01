@@ -14,7 +14,7 @@ fn run(arg: String) -> Vec<u8> {
         redis::call(arg[REDIS_OPTION_KEYWORD.len()..].as_bytes())
     } else if arg.starts_with(SQLITE_OPTION_KEYWORD) {
         log::info!("calling sqlite");
-        redis::call(arg[SQLITE_OPTION_KEYWORD.len()..].as_bytes())
+        sqlite::call(arg[SQLITE_OPTION_KEYWORD.len()..].as_bytes())
     } else {
         Vec::from("unknown command")
     }
